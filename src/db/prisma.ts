@@ -19,13 +19,13 @@ export const prisma = new PrismaClient({ adapter }).$extends({
   result: {
     product: {
       price: {
-        // @ts-ignore
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         compute(product: any) {
           return product.price.toString();
         },
       },
       rating: {
-        // @ts-ignore
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         compute(product: any) {
           return product.rating.toString();
         },
